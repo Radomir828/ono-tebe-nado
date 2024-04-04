@@ -13,9 +13,15 @@
     <header class="header">
       <nav class="header__menu">
         <ul class="header__menu-list">
-          <li class="header__menu-item">главная</li>
-          <li class="header__menu-item">посмотреть лоты</li>
-          <li class="header__menu-item">об аукционе</li>
+          <li class="header__menu-item header__menu-item__no-bullet">
+            главная
+          </li>
+          <li class="header__menu-item">
+            <a href="#0">посмотреть лоты</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#0">об аукционе</a>
+          </li>
         </ul>
       </nav>
       <a class="header__logo"
@@ -34,25 +40,33 @@
     <main>
       <section class="cover">
         <div class="overlay"></div>
-
         <h1 class="cover-title">
           <span class="aligned-text aligned-text_left"
             >О<span class="letter-spacing-extended">но</span></span
-          ><span class="aligned-text aligned-text_center"
+          >
+          <span class="aligned-text aligned-text_center"
             >те<span class="letter-spacing-extended">бе</span></span
           >
-          <span class="aligned-text aligned-text_right"
-            ><span class="letter-spacing-extended"
-              >н<span class="no-letter-spacing">а</span
-              ><span class="no-letter-spacing">до</span></span
-            ></span
-          >
+          <span class="aligned-text aligned-text_right">
+            <span class="letter-spacing-extended">н</span>ад<span
+              class="no-letter-spacing"
+              >o</span
+            >
+          </span>
         </h1>
-        <div class="cover__description-text">
-          <p>Аукцион вещей, в которые никто не верил</p>
+        <div class="cover__description">
+          <p class="cover__description-text cover__description__common-styles">
+            Аукцион вещей, в которые никто не верил
+          </p>
+          <button
+            class="bet-button cover__description__common-styles"
+            type="button"
+          >
+            Сделать ставку
+          </button>
         </div>
-        <button class="bet-button" type="button">Сделать ставку</button>
       </section>
+
       <section class="lots">
         <h2 class="lots__heading">Лоты</h2>
 
@@ -145,18 +159,20 @@
       <address class="address address__footer">
         <a href="tel:+99995555555">+9 999 555 5555</a>
         <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
-        <p class="header__address">
+        <p class="footer__address">
           наб. Принсенграхт 263-<br />265, Амстердам
         </p>
       </address>
 
       <nav class="footer__menu">
         <ul class="footer__menu-list">
-          <li class="footer__menu-list-item footer__menu-link_active">
+          <li class="footer__menu-list-item footer__menu-list-item_active">
             главная
           </li>
-          <li class="footer__menu-list-item">посмотреть лоты</li>
-          <li class="footer__menu-list-item">об аукционе</li>
+          <li class="footer__menu-list-item">
+            <a href="#0">посмотреть лоты</a>
+          </li>
+          <li class="footer__menu-list-item"><a href="#0">об аукционе</a></li>
         </ul>
       </nav>
 

@@ -7,37 +7,30 @@
 }
 
 .header__menu {
-  width: 391.48px;
-  height: 22px;
   margin: 44px 0 40px 26px;
 }
 
 .header__menu-list {
   display: flex;
-  justify-content: space-between;
-  gap: 32px;
+  gap: 34px;
   list-style: circle;
 }
 
-.header__menu-item:first-child {
-  list-style-type: none;
-}
-.header__menu-item:nth-child(2) {
-  width: 151px;
+.header__menu-item {
+  line-height: 21.13px;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 6px;
 }
 
-.header__menu-item:last-child {
-  width: 110px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.header__menu-item__no-bullet {
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .header__logo {
   display: block;
-  width: 148px;
-  height: 105px;
+  width: 137px;
+  height: 94px;
 }
 
 .header__logo-img {
@@ -45,21 +38,22 @@
 }
 
 .address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
   width: 240px;
-  height: 98px;
 
   color: #000;
   font-style: normal;
 }
 
 .address__header {
-  margin: 5px 28px 2px 184px;
+  justify-self: end;
+  margin-right: 26px;
 }
 
 .address a {
-  display: block;
-  line-height: 24px;
-
   text-decoration: underline;
   text-underline-offset: 5px;
 }
@@ -67,7 +61,6 @@
 .cover {
   position: relative;
   width: 1100px;
-  height: 757px;
   background-image: url(/images/cover.jpg);
 
   background-size: cover;
@@ -79,9 +72,15 @@
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
 }
 
 .cover-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 165px 50px 135px;
+
   font-weight: 700;
   font-size: 100px;
   text-transform: uppercase;
@@ -91,31 +90,18 @@
 .aligned-text {
   display: block;
   letter-spacing: 0.3em;
-}
+  z-index: 1;
 
-.aligned-text_left {
-  position: absolute;
-  top: 165px;
-  left: 50px;
-  width: 316px;
   line-height: 115px;
-  margin-bottom: 20px;
 }
 
 .aligned-text_center {
-  position: absolute;
-  top: 300px;
-  left: 336px;
-  width: 369px;
+  text-align: center;
   line-height: 100px;
-  margin-bottom: 20px;
 }
 
 .aligned-text_right {
-  position: absolute;
-  top: 420px;
-  left: 633px;
-  width: 417px;
+  text-align: end;
   line-height: 100px;
 }
 
@@ -124,38 +110,34 @@
 }
 
 .no-letter-spacing {
-  letter-spacing: 0.3em;
+  letter-spacing: 0;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px 51px 78px;
 }
 
 .cover__description-text {
-  position: absolute;
-  width: 637px;
-  height: 28px;
-  left: 78px;
-  bottom: 62px;
-
-  font-size: 22px;
-
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   word-spacing: 18px;
-  color: #ffffff;
 }
 
 .bet-button {
-  position: absolute;
-  width: 256px;
-  height: 51px;
-  right: 50px;
-  bottom: 51px;
-  border: 1px solid #fff;
-
-  font-size: 22px;
-  text-align: center;
+  min-width: 256px;
+  min-height: 51px;
   line-height: 25.83px;
-  text-transform: uppercase;
-
   background-color: transparent;
-  color: #fff;
+  border: 1px solid #fff;
+}
+
+.cover__description__common-styles {
+  z-index: 1;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .lots {
@@ -206,6 +188,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .card_type_film {
   background-image: url(/images/card-lot-01.jpg);
 }
@@ -255,7 +238,7 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   gap: 72px;
-  padding: 0 24px 180px;
+  padding: 0 24px 175px;
 }
 
 .about__logo {
@@ -277,8 +260,6 @@
 
 .about__column {
   margin-top: 135px;
-  width: 693px;
-  height: 450px;
 }
 
 .about__title {
@@ -306,6 +287,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 50px 88px;
+  font-size: 18px;
 }
 
 .address__footer {
@@ -314,8 +296,6 @@
 
 .footer__menu {
   text-align: center;
-  width: 149px;
-  height: 64px;
 }
 
 .footer__menu-list {
@@ -327,15 +307,14 @@
   text-decoration: underline;
 }
 
-.footer__menu-link_active {
+.footer__menu-list-item_active {
   text-decoration: none;
 }
 
 .footer__social-list {
   display: flex;
   justify-content: space-between;
-  width: 240px;
-  height: 48px;
+  min-width: 240px;
   list-style: none;
 }
 
@@ -346,4 +325,13 @@
 .footer__social-icon {
   width: 48px;
   height: 48px;
+}
+
+.header__address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__address {
 }
